@@ -19,17 +19,17 @@ void shell_sort(int *array, size_t size)
 	while (gap > 0)
 	{
 	for (i = gap; i < (int)size; i++)
-		{
-		 temp = array[i];
-		j = i;
+	{
+		temp = array[i];
+	j = i;
 
-		while (j >= gap && array[j - gap] > temp)
+	while (j >= gap && array[j - gap] > temp)
 	{
 		array[j] = array[j - gap];
 		j -= gap;
 	}
 
-	array[j] = temp;
+		array[j] = temp;
 	}
 	print_array(array, size);
 	gap = (gap - 1) / 3;
